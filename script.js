@@ -1,38 +1,43 @@
-const animals = ['1','2','3'];
 
-function ShowArr(arr, elem) {
-    let out = '';
-    for (let i=0; i < arr.lenght; i++) {
-        // if (arr[i] !== undefined) {
-            
-        // }
-        out += '<div><h2><h2><span>${i}</span></div>'
-        
+// console.log(Array.apply(null, {length: 10}).map(Number.call, Number).filter(item => {if (item % 3 === 0) return true}).length);
+
+// let count = 0;
+// for (let i = 0; i <= 100; i++) {
+//     if ( i % 3 === 0) count++;
+// }
+// console.log(count);
+
+
+function t9() {
+    let out = "";
+    let inputT1 = +document.querySelector(".i-91").value
+    let inputT2 = +document.querySelector(".i-92").value
+    if (inputT1 > inputT2) {
+        inputT1 = + document.querySelector('.i-92').value
+        inputT2 = + document.querySelector('.i-91').value
     }
-    document.querySelector(elem).innerHTML = out;
-
-document.querySelector('.out-1-source').innerHTML = 'const numbers=['+animals+']';
-document.querySelector('.out-1-source-lenght').innerHTML = 'lenght const' + animals.length;
-
+    for (; inputT1 <= inputT2; inputT1++) {
+        out += inputT1 + '';
+    }
+    document.querySelector('.out-9').innerHTML = out;
 }
 
-ShowArr(animals, '.out-1-source-image')
-
-
-function addToArray() {
-    if (!Number.isInteger(+document.querySelector('.array-index').value)) {
-        alert ('только полние');
-        return false;
-    };
-    let index = +document.querySelector('.array-index').value;
-    if (index > 50) {
-        alert("delete this")
-        return false;
-    } else if (index < 0){
-        alert('index biggest 0');
-        return false;
+function t9() {
+    let out = "";
+    let a = +document.querySelector(".i-91").value
+    let b = +document.querySelector(".i-92").value
+    if (a > b) {
+       let t = a;
+       a = b;
+       b = a;
+       b = [a,a=b[0]];
+       console.log('b' +b)
+       console.log('a' +a)
+       [a,b] = [b,a];
     }
-    animals[index] = document.querySelector('.array-element').value;
-    ShowArr(animals, '.out-1-source-image')
+    for (let i = a; i < b; i++) {
+        out += inputT1 + '';
+    }
+    document.querySelector('.out-9').innerHTML = out;
 }
-document.querySelector('.add-to-array').onclick = addToArray;
+document.querySelector('.b-9').innerHTML = t9;
