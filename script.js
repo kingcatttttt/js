@@ -1,46 +1,21 @@
-const obj = [
-    {
-        "name":"a",
-        "level":"hacker"
-    },
-    {
-        "name":"a2",
-        "level":"doomer"
-    },
-    {
-        "name":"a4",
-        "level":"hacker"
-    }
-]
+let fontSize = 16;
+if (localStorage.getItem("font-size")) {
+    fontSize = localStorage.getItem("font-size")
+}
 
-let res = obj.some( item => {
-    return item.level === "doomer";
+document.querySelector(".font-zoom_item").textContent = fontSize;
+document.body.style.fontSize = fontSize + "px";
 
-})
-console.log(res)
+document.querySelector(".font-zoom_plus").onclick = () => {
+    fontSize++;
+    localStorage.setItem(".font-size", fontSize)
+    document.querySelector(".font-zoom_item").textContent = fontSize;
+    document.body.style.fontSize = fontSize + "px";
+}
+document.querySelector(".font-zoom_minus").onclick = () => {
+    fontSize--;
+    localStorage.setItem(".font-size", fontSize)
+    document.querySelector(".font-zoom_item").textContent = fontSize;
+    document.body.style.fontSize = fontSize + "px";
+}
 
-let res2 = obj.every( item => {
-    return item.level === "doomer";
-
-})
-console.log(res2)
-
-let flag = false;
-obj.forEach(item => {
-    if (item.level === "doomer") {
-        flag = true;
-    }
-})
-console.log(flag)
-
-let res3 = obj.find( item => {
-    return item.level === "doomer";
-
-})
-let res4 = obj.find( item => {
-    return item.level === "doomer2";
-
-})
-
-console.log(res3)
-console.log(res4)
