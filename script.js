@@ -1,34 +1,46 @@
-const arr = [1,2,4,56,7,3,6,3,6,2,6,765,8,9]
-console.log(arr)
+const obj = [
+    {
+        "name":"a",
+        "level":"hacker"
+    },
+    {
+        "name":"a2",
+        "level":"doomer"
+    },
+    {
+        "name":"a4",
+        "level":"hacker"
+    }
+]
 
-//1
+let res = obj.some( item => {
+    return item.level === "doomer";
 
-// let a1 =[... new Set(arr)];
-// console.log(a1)
+})
+console.log(res)
 
-//1.1
+let res2 = obj.every( item => {
+    return item.level === "doomer";
 
-// let a1 = Array.from(new Set(arr));
-// console.log(a1)
+})
+console.log(res2)
 
-//1.2
+let flag = false;
+obj.forEach(item => {
+    if (item.level === "doomer") {
+        flag = true;
+    }
+})
+console.log(flag)
 
-// let a2 = arr.filter( (item, index) => {
-//     return arr.indexOf(item) === index;
+let res3 = obj.find( item => {
+    return item.level === "doomer";
 
-// })
-// console.log(a2);
+})
+let res4 = obj.find( item => {
+    return item.level === "doomer2";
 
-//1.3
-// let a2 = arr.filter( (item, index) => {
-//     return arr.indexOf(item) !== index;
+})
 
-// })
-// console.log(a2);
-
-//1.4 
-let a3 =arr.reduce((result, item) => {
-    return result.includes(item) ? result : [...result, item];
-
-}, [])
-console.log(a3)
+console.log(res3)
+console.log(res4)
