@@ -1,44 +1,12 @@
-console.log("hello")
-console.log("%c hello" , "color: orange; background: red; font-weight:bold; text-transform: uppercase; padding: 10px; margin: 50px; width: 300px; border: 2px solid black;")
-console.group("text");
-console.groupEnd();
+const images = document.querySelector("img")
+let imageInterval;
 
-function one() {
-    console.time()
-    let a = 5;
-    a++;
-    two();
-    console.timeLog();
-    console.timeEnd();
+imageInterval = setInterval(() => {
 
-}
-
-function two() {
-    let b = 5;
-    b++;
-    console.trace("function 2");
-}
-one();
-
-
-let obj = {
-    one : 4,
-    two : 5,
-    hello : "hi"
-}
-console.log(obj)
-console.table(obj)
-
-function four() {
-    console.count("hi")
-}
-
-four();
-four();
-four();
-
-console.assert()
-
-let container = document.querySelector("container")
-console.dir(container)
-console.dir(obj)
+console.log('image 1 ' +images[0].complete);
+console.log('image 2 ' +images[1].complete);
+console.log('image 3 ' +images[2].complete);
+if (images[0].complete && images[1].complete && images[2].complete) {
+    clearInterval(imageInterval);
+    }   
+},50)
