@@ -1,23 +1,33 @@
-const zone1 = document.querySelector(".zone-1");
-const zone2 = document.querySelector(".zone-2");
-const ufo = document.querySelector("#ufo");
+const romes = {"m": 1000,"cm":900,"d":500,"cd":400,"c":100,"xc":90,"l":50,"xl":40,"x":10,"ix":9,"v":5,"IV":4,"I":1,};
 
-zone1.ondragover = allowDrop;
-zone2.ondragover = allowDrop;
-function allowDrop(event) {
-    event.preventDefault;
+// function romanConvertOne(a) {
+//     let resuslt = "";
+//     decimalValue.map( (item,index) => {
+//         while (item <= a) {
+//             resuslt += romanValue[index];
+//             a = a - item;
+//             console.table({
+//                 "a": a + item,
+//                 "item": item,
+//                 "a = a - item" : a,
+//                 "result" : resuslt,
+//             })
+           
+//         }
+//         return resuslt;
+//     })
+// }
+function romanConvertOne(a) {
+    let result = "";
+    for (let key in romes) {
+        while (romes[key] <= a) {
+            result += key;
+            a = a - romes[key];
+        }
+    }
 }
-
-ufo.ondragstart = drag;
-function drag(event) {
-    event.dataTransfer.setData("id", event.target.id);
-
-}
-
-zone1.ondrop = drop;
-zone2.ondrop = drop;
-function drop(event) {
-    let itemId = event.dataTransfer.getData("id");
-    console.log(itemId);
-    event.target.append(document.getElementById(itemId));
-}
+// document.querySelector("button").onclick = () => {
+//     let num = +document.querySelector("input").value;
+//     document.querySelector("out").innerHTML = romanConvertOne(num);
+// }
+console.log(romanConvertOne(a))
