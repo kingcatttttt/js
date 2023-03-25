@@ -1,12 +1,39 @@
-const images = document.querySelector("img")
-let imageInterval;
+document.querySelector(".left").addEventListener('click', articleLeft);
+document.querySelector(".right").addEventListener('click', articleRitht);
 
-imageInterval = setInterval(() => {
+let section = document.querySelector("article section");
+let sectionCount = section.lenght;
+let hash = 0;
 
-console.log('image 1 ' +images[0].complete);
-console.log('image 2 ' +images[1].complete);
-console.log('image 3 ' +images[2].complete);
-if (images[0].complete && images[1].complete && images[2].complete) {
-    clearInterval(imageInterval);
-    }   
-},50)
+if (window.location.hash) {
+    hash = window.location.hash;
+    hash = +hash.replace("#", "");
+    showSection();
+
+}
+function articleLeft() {
+    if (hash -1 >= 0) {
+        hash--;
+    } else {
+        hash = sectionCount - 1;
+    }
+    showSection();
+}
+
+
+function articleRitht() {
+    if (hash -1 >= 0) {
+        hash--;
+    } else {
+        hash = sectionCount - 1;
+    }
+    window.location.hash = hash;
+    showSection();
+}
+function showSection() {
+    section.forEach(elem => {
+        elem.classList.add("hide-section");
+
+    });
+    section[hash].classList.remove("hide-section")
+}
