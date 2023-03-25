@@ -1,17 +1,12 @@
-.button-footer {
-    display: none;
+.zone-1 {
+    border: 2px solid black;
+    height: 200px;
 }
-button {
-    font-size: 40px;
-    padding: 20px;
+.zone-2 {
+    border: 2px solid black;
+    height: 200px;
 }
-
-@media screen and (max-width: 800px) {
-    .button-footer {
-        display: block;
-    }
-    .hide-section {
-        display: none;
-    }
-    
+.img1 {
+    max-width: 30px;
+    max-height: 30px;
 }
