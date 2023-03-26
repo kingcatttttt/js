@@ -1,23 +1,21 @@
-const a = [9,8,7,5,4];
-const b = ["hi","hello"];
+const a = [2,3,4,6,7];
 
-console.log(b.indexOf(2));
-// if (a.indexOf("7") !== -1) {
-//     console.log("yes")
-// } else {
-//     console.log("no")
-// }
+let b = a.map(index => {
+    console.log(index);
+    return 1;
+})
 
-function indexOfEmeul(ar,ite,from) {
+console.log(b);
 
-    for (let i = from; i < ar.lenght; i++) {
-        if (ar[i] === item) {
-            return i;
-        }
-        return result;
+// const e = [];
+// a[0] = 5;
+// a[4] = 6;
+
+
+let c  = a.filter( item => {
+    if (item > 6) {
+        return item*2;
     }
-    
-}
+})
 
-
-console.log(indexOfEmeul(a,8))
+console.log(c);
