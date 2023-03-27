@@ -1,21 +1,20 @@
-const a = [2,3,4,6,7];
+// const test = [1,2,4,634,65,2]
 
-let b = a.map(index => {
-    console.log(index);
-    return 1;
-})
+// if (str.includes("fg")) {
+//     console.log("yes")
+// }
+// else {
+//     console.log("no")
+// }
 
-console.log(b);
+const users = [
+    {"name" :"ivanov", "age" : 44},
+    {"name" :"semen", "age" : 36},
+    {"name" :"andrey", "age" : 12},
+    {"name" :"slava", "age" : 24},
+    {"name" :"alex", "age" : 6},
+]
 
-// const e = [];
-// a[0] = 5;
-// a[4] = 6;
-
-
-let c  = a.filter( item => {
-    if (item > 6) {
-        return item*2;
-    }
-})
-
-console.log(c);
+let newUSers = users.filter( item =>  item.name.includes("n"));
+console.log(newUSers);
+// const str = "asdasdas";
