@@ -1,43 +1,18 @@
-// const browser = [
+const clients = [
+    {"iin": "123" ,"user" :"ivan", "debt": 3},
+    {"iin": "1235" ,"user" :"semen", "debt": 5},
+    {"iin": "4321" ,"user" :"bob", "debt": 3},
+    {"iin": "1234" ,"user" :"ricard", "debt": 2},
+];
 
-// ]
-// let a = [99,88];
-// console.log(a);
-// a[0] = 66;
-// console.log(a);
-// a[a.length] = 55;
-// console.log(a);
-// a.push(88,33,22);
-// console.log(a);
+const a = [2,-1,-2,25,-2,52,652,67,234,76,2,6,2,];
+let b = a.filter((item,index,array)=> {
+    if(item > -1 ) return array;
+});
+console.log(a);
+console.log(b);
 
-// console.log(a.push(111));
-
-// function hello() {
-//     // return document.querySelector(".one").innerHTML = 6
-//     return a.push(b);
-// }
-
-// a.pop();
-// console.log(a);
-// console.log(a.pop());
-// console.log(a);
-// const b = [3];
-// console.log(b)
-// console.log(b.pop());
-// console.log(b);
-
-let car = [];
-document.querySelector(".add").onclick = () => {
-    let id = document.querySelector("#goods").value;
-    if (!car.includes(id)) {
-        car.push(id);
-    }
-    console.log(car);
-}
-
-document.querySelector(".pop").onclick = () => {
-    let id = document.querySelector("#goods").value;
-    let goods = car.pop();
-    console.log("id" + goods + "delete");
-    console.log(car);
-}
+let debs = clients.filter(item => {
+    if (item.debt >= 2).sort((a,b)=> (b.debt - a.debt))
+})
+console.log(debs)
