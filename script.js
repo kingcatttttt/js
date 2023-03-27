@@ -1,31 +1,43 @@
-const temp = [1,2,4,334,123,6454,234,234,234,8564,34]
+// const browser = [
 
-const z = [
+// ]
+// let a = [99,88];
+// console.log(a);
+// a[0] = 66;
+// console.log(a);
+// a[a.length] = 55;
+// console.log(a);
+// a.push(88,33,22);
+// console.log(a);
 
-];
+// console.log(a.push(111));
 
-let tF = temp.map(item => {
-    console.log(item);
-    return 10+item*1.8;
-})
+// function hello() {
+//     // return document.querySelector(".one").innerHTML = 6
+//     return a.push(b);
+// }
 
-console.log(tF);
+// a.pop();
+// console.log(a);
+// console.log(a.pop());
+// console.log(a);
+// const b = [3];
+// console.log(b)
+// console.log(b.pop());
+// console.log(b);
 
-let a = [33,44,66];
-a[10] = 90;
-
-let b = a.map((item, index, array) => {
-    if (index ==  1) {
-        array[ index + 1 ] = 77;
+let car = [];
+document.querySelector(".add").onclick = () => {
+    let id = document.querySelector("#goods").value;
+    if (!car.includes(id)) {
+        car.push(id);
     }
-    return item;
-})
+    console.log(car);
+}
 
-console.log(b);
-
-const zBsck = z.map(item => {
-    item.name = item.name.trim().toLocalLowerCase();
-    return item;
-})
-
-console.log(zBsck);
+document.querySelector(".pop").onclick = () => {
+    let id = document.querySelector("#goods").value;
+    let goods = car.pop();
+    console.log("id" + goods + "delete");
+    console.log(car);
+}
