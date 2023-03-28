@@ -1,18 +1,12 @@
-const clients = [
-    {"iin": "123" ,"user" :"ivan", "debt": 3},
-    {"iin": "1235" ,"user" :"semen", "debt": 5},
-    {"iin": "4321" ,"user" :"bob", "debt": 3},
-    {"iin": "1234" ,"user" :"ricard", "debt": 2},
+const a = [
+    {"id":55 , "cty": "arc"},
+    {"id":44 , "cty": "asd"},
+    {"id":33 , "cty": "rcs"},
 ];
 
-const a = [2,-1,-2,25,-2,52,652,67,234,76,2,6,2,];
-let b = a.filter((item,index,array)=> {
-    if(item > -1 ) return array;
-});
-console.log(a);
-console.log(b);
-
-let debs = clients.filter(item => {
-    if (item.debt >= 2).sort((a,b)=> (b.debt - a.debt))
+let b = a.reduce( (acum,item) => {
+    acum.push(item.id);
+    return acum;
 })
-console.log(debs)
+console.log(b);
+console.log(Array.isArray(b))
