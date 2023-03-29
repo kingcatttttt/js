@@ -1,24 +1,16 @@
-const a = [3,4,5,6,7];
-const b = ["c","d","a"];
+const a = [4,5,6,7,8];
+const c = [
+    {name: "ivan", age: 17},
+    {name: "sergey", age: 41},
+    {name: "semen", age: 34},
+    {name: "slum", age: 23},
+]
+let e = [];
 
-const c = [...a, ...b];
-console.log(c);
+let b = e.every(item => {
+    if (item.age < 16) {
+        return true;
+    }
+})
 
-const d = [...b];
-console.log(d);
-
-const e = [..."hello"];
-console.log(e);
-
-const f = [...new Set([1,3,4,53])];
-console.log(f)
-
-function test() {
-    console.log([...arguments]);
-}
-
-test();
-
-let p = document.querySelector("p");
-console.dir(p);
-console.log([...p]);
+console.log(b);
