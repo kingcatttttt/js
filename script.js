@@ -1,16 +1,19 @@
-const a = [4,5,6,7,8];
-const c = [
-    {name: "ivan", age: 17},
-    {name: "sergey", age: 41},
-    {name: "semen", age: 34},
-    {name: "slum", age: 23},
+const a = [
+    {name: "ivan", age: 32},
+    {name: "semen", age: 26},
+    {name: "andrey", age: 24},
+    {name: "sneip", age: 23},
+    {name: "q", age: 12},
 ]
-let e = [];
+const c = [22,33,44,55,66,77];
+const d = ["hell"]
 
-let b = e.every(item => {
-    if (item.age < 16) {
+let b = c.findIndex(item => {
+    if (item > 42) {
         return true;
+    } else {
+        return false;
     }
 })
-
-console.log(b);
+let f = d.lastIndexOf(77);
+console.log(f)
