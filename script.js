@@ -1,21 +1,13 @@
-const a = [9,7,54,21,14]
+const a = [1,2,3,4,56,7,2,43,0];
+let b = a.map((item,index) => {
+    console.log(item);
+    return item * 3;
+})
+console.log(b);
 
-console.log(a.indexOf(9))
-const b = ["hi","hello"];
-
-if(b.indexOf("hello") != -1) {
-    console.log("yes")
-} else {
-    console.log("no")
-}
-function indexOfEmul(ar,item, from = 0) {
-    for (let i = from; i < ar.lenght; i++) {
-        if (ar[i] === item) {
-            return i;
-        }
+let c = a.filter( item =>{
+    if (item % 2 === 0) {
+        return true;
     }
-}
-let result = -1;
-
-return result;
-console.log(indexOfEmul(a,8));
+})
+console.log(c)
