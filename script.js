@@ -1,27 +1,21 @@
-Selection.addEventListener("change", ChangeUrllaunge)
-const alllang = ["em","ua"];
-function ChangeUrllaunge() {
-    let lang = selecete.value;
-    location.href = window.location.pathname + "#"+lang;
-    location.reload();
-}
+const a = [9,7,54,21,14]
 
-function Changelaunge() {
-    let hash = window.location.hash;
-    hash = hash.substring(1);
-    if (!alllang.includes(hash)){
-        location.href = window.location.pathname = "#en"
-        location.reload();
-    }
-    selecete.value = hash;
-    document.querySelector("title").innerHTML = langArr['unit']['hash'];
-    document.querySelector(".lng-chip").innerHTML = langArr['unit']['hash'];
-    for (let key in langArr){
-        let elem = document.querySelector(".lng-" + key) {
-            if (elem) {
-                innerHTML = langArr[key][string];
-            }
+console.log(a.indexOf(9))
+const b = ["hi","hello"];
+
+if(b.indexOf("hello") != -1) {
+    console.log("yes")
+} else {
+    console.log("no")
+}
+function indexOfEmul(ar,item, from = 0) {
+    for (let i = from; i < ar.lenght; i++) {
+        if (ar[i] === item) {
+            return i;
         }
-        document.querySelector(".lng" + key).innerHTML = langArrp["key"]["hash"];
     }
 }
+let result = -1;
+
+return result;
+console.log(indexOfEmul(a,8));
