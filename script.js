@@ -1,26 +1,36 @@
-const temp = [23,32,41,3,4,234,231,5632,23,1,7,81]
-
-const a =[
+const browser = [
 
 ]
 
-let tf = temp.map(item => {
-    console.log(item);
-    return item * 1.8 + 32;
-})
-console.log(tf)
-let b = [33,44,55]
+let a = [99,88]
+console.log(a)
 
-let x = b.map(iten => {
-    if (index === 1) {
-        Array[inedx+1] == 66;
+a[0] = 55;
+console.log(a)
+a[a.length] = 55;
+console.log(a)
+a.push(44);
+console.log(a)
+console.log(a.push(8))
+console.log(a)
+
+function hello() {
+ a.push(b);
+}
+
+a.pop();
+console.log(a)
+console.log(a.pop())
+console.log(a)
+const b = [3]
+console.log(b)
+console.log(b.pop())
+
+const cars = [];
+document.querySelector(".puhs").onclick = () => {
+    let id = document.querySelector(".goods").value;
+    if (!cars.includes(id)) {
+        cars.push(id)
     }
-    return item;
-})
-console.log(item)
-b[10] = 90;
-
-const zback = z.map(item => {
-    item.name = item.name.trim().tolocal();
-    return item;
-})
+    console.log(cars)
+}
