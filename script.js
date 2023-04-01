@@ -1,20 +1,26 @@
-// const test = [21,2,352,33]
+const temp = [23,32,41,3,4,234,231,5632,23,1,7,81]
 
-// if (str.includes("asd")) {
-//     console.log("yes")
-// } else {
-//     console.log("no")
-// }
-const users = [
-    {"name":"ivan", "age":14},
-    {"name":"bob", "age":32},
-    {"name":"alex", "age":42},
-    {"name":"samen", "age":12},
+const a =[
+
 ]
 
-let newUsers = users.filter(item => {
-    return item.name.includes("i")
+let tf = temp.map(item => {
+    console.log(item);
+    return item * 1.8 + 32;
 })
+console.log(tf)
+let b = [33,44,55]
 
-const str = "asdasdasd"
-console.log(newUsers)
+let x = b.map(iten => {
+    if (index === 1) {
+        Array[inedx+1] == 66;
+    }
+    return item;
+})
+console.log(item)
+b[10] = 90;
+
+const zback = z.map(item => {
+    item.name = item.name.trim().tolocal();
+    return item;
+})
