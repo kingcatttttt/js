@@ -1,8 +1,15 @@
-const clienst = [
-
+let a = [
+    {"id":1 ,"ciry": "a"}
+    {"id":3 ,"ciry": "b"}
+    {"id":2 ,"ciry": "c"}
 ]
-const a = [43,31,23,2,1]
-let b = a.filter( item => {
-    return true;
-})
+
+let b = a.reduce((acum, item ) => {
+acum.push(item.id)
+  return acum;
+},[])
+
 console.log(b)
+
+let res = [];
+console.log(Array.isArray(B));
