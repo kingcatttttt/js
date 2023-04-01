@@ -1,18 +1,16 @@
-let a = [3,4,5,6]
 
-let b = a.shift();
-console.log(b);
+const a1 = [33,33,44,55,66,77]
+const a2 = [11,22]
+const a3 = [123,123,123]
+const b = a2.concat(a1,a3)
+console.log(b)
 
-let c = a.unshift();
-console.log(c)
-
-let d = [22,33,44,55,666,77]
-
-let f = d.slice(3);
+let c = "hello";
+let d = "hi"
+let f = d.concat(c);
 console.log(f)
-console.log(d)
 
-let e = "hello"
-
-e.shift("d");
-console.log(e)
+let k = [33,44,55,66,77,88,88]
+let g = k.splice(2,0,55)
+console.log(g)
+console.log(k)
