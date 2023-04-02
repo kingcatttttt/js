@@ -1,16 +1,29 @@
-const a = [3,4,5,6,7,8]
-const c = [
-    {name: "ivan", age : 12},
-    {name: "semen", age : 15},
-    {name: "bob", age : 32},
-    {name: "a", age : 23},
+const a = [ 
+    {name: "semen", age: 23},
+    {name: "van", age: 11},
+    {name: "billy", age: 435},
+    {name: "danie", age: 123},
 ]
 
-let b = e.some(item => {
-             return true;       
-
-    
+let b = a.find(item => {
+   if( item.age <= 18) {
+    return true;
+   }
 })
-console.log(b);
 
-let e = [];
+console.log(b)
+
+// const c = [22,33,44,55];
+
+// let e = d.find(item => {
+//    if(item === "e") {
+//     return true
+//    }
+//     }
+//  )
+ 
+//  console.log(e)
+const d = 'heelo'
+
+let f = d.lastIndexOf("l")
+console.log(f)
