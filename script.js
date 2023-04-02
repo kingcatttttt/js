@@ -1,16 +1,24 @@
+let a = [3,4,5]
+let b = [6,7,8]
 
-const a1 = [33,33,44,55,66,77]
-const a2 = [11,22]
-const a3 = [123,123,123]
-const b = a2.concat(a1,a3)
-console.log(b)
+const c = [...a, ...b];
+console.log(c)
 
-let c = "hello";
-let d = "hi"
-let f = d.concat(c);
-console.log(f)
+const d = [...b]
+console.log(d);
 
-let k = [33,44,55,66,77,88,88]
-let g = k.splice(2,0,55)
-console.log(g)
-console.log(k)
+const i = [..."hello"]
+console.log(i)
+
+
+const e = [...new Set([1,2,3,4,5,6,7])]
+console.log(e)
+
+function test() {
+    console.log([...arguments]);
+}
+
+test(1,2,3,4)
+
+let p = document.querySelectorAll("p");
+console.dir(p);
