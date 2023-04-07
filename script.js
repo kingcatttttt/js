@@ -1,12 +1,32 @@
-let a = [3,4, [6,7], ,5,6];
-let b = a.flat(2)
-console.log(b)
-console.log(a);
+document.querySelector(".add").addEventListener("click", add)
+function add() {
+    let a = document.querySelector(".add1").value;
+    
+    if (a == 2) {
+        document.querySelector(".ao").classList.add("aboba")
+    this.disabled = true;
+    document.querySelector(".score").innerHTML = score++ || score--;
+       alert("правільно")
+    } else {
+        alert("ти даун?")
 
-let c = [1,2,2,1,1,1]
-let g = c.fill(2,0,4)
+        this.disabled = true;
+    }
+}
 
-console.log(g)
 
-let s = [1,2,3,4,5,6,7,8]
-console.log(Object.keys(s));
+document.querySelector(".f").addEventListener("click", ad)
+function ad() {
+    let b = document.querySelector(".add2").value;
+    document.querySelector(".score").innerHTML = result++;
+    if (b == 6) {
+       alert("правільно")
+       document.querySelector(".ao1").classList.add("aboba")
+    } else {
+        alert("ти даун?")
+    }
+}
+let score = 0;
+document.querySelector(".score").innerHTML = score++ ;
+let result = score;
+
